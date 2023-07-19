@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/background_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alata"
+        android:gravity="center"
+        android:text="Apna खाता"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black" />
+
+</LinearLayout>

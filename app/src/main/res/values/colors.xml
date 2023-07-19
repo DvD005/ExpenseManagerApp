@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#D0050505</color>
+    <color name="white">#000000</color>
+    <color name="toolbar_color">#F7EFAB35</color>
+    <color name="dashboard">#F7E4D9EF</color>
+    <color name="income">#F754C840</color>
+    <color name="expense">#E9D13C3C</color>
+    <color name="date_color">#F754C840</color>
+    <color name="expense_amt">#E9D13C3C</color>
+    <color name="header">#11112C</color>
+
+</resources>

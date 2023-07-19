@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".DashboardFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        android:elevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alata"
+                        android:text="Income"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/income">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alata"
+                        android:text="Expense"
+
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/expense">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/income_set_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alata"
+                        android:text="000.00"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/income">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/expense_set_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alata"
+                        android:text="000.00"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/expense">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alata"
+                    android:padding="10dp"
+                    android:text="Income:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large">
+
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/recycler_Income"
+                    android:layout_height="200dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alata"
+                    android:padding="10dp"
+                    android:text="Expense:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large">
+
+                </TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/recycler_Expense"
+                    android:layout_height="200dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="160dp">
+
+            <TextView
+                android:id="@+id/expense_ft_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@color/expense"
+                android:fontFamily="@font/alata"
+                android:padding="5dp"
+                android:text="Expense"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#FFFFFF"
+                android:visibility="invisible">
+
+            </TextView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/expense_ft_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:backgroundTint="#E9D13C3C"
+                android:elevation="6dp"
+                android:src="@drawable/expense"
+                android:visibility="invisible"
+                app:fabSize="mini"
+                app:pressedTranslationZ="12dp">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="90dp">
+
+            <TextView
+                android:id="@+id/income_ft_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@color/income"
+                android:fontFamily="@font/alata"
+                android:padding="5dp"
+                android:text="Income"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#FFFFFF"
+                android:visibility="invisible">
+
+            </TextView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/income_ft_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:backgroundTint="#F754C840"
+                android:elevation="6dp"
+                android:src="@drawable/income"
+                android:visibility="invisible"
+                app:fabSize="mini"
+                app:pressedTranslationZ="12dp">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fb_main_plus_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:backgroundTint="#C595D6"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/income"
+            app:fabSize="normal"
+            app:pressedTranslationZ="12dp">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>
